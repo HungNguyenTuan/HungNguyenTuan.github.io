@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hand in hand</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style/control.css" />
+    <link rel="stylesheet" type="text/css" href="style/common.css" />
+    <link rel="stylesheet" type="text/css" href="style/layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $.getJSON(
+        "https://project-x-f09a8.firebaseio.com/Projects.json",
+        function (data) {
+          var objs = Object.keys(data).map(function (key) {
+            return { id: key, value: data[key] };
+          });
+          objs.forEach(function (item) {
+            var eventShortdesDOM = $("<div/>");
+            eventShortdesDOM
+              .css("color", "#007bff")
+              .css("opacity", "0.8")
+              .addClass(" center__short-description ")
+              .html(
+                item.value.short__description
+                  ? item.value.short__description
+                  : "Dang cap nhat"
+              );
+            var eventImgDOM = $("<img/>");
+            eventImgDOM
+              .attr("src", item.value.image)
+              .css("margin", "0 5px")
+              .html(item.value.image);
+            var eventNameDOM = $("<p/>");
+            eventNameDOM
+              .css("color", "#007bff")
+              .addClass("center__name")
+              .html(item.value.name ? item.value.name : " Dang cap nhat ");
+            var eventaDOM = $("<a/>");
+            eventaDOM
+              .css("cursor", "pointer")
+              .append(eventImgDOM)
+              .append(eventNameDOM)
+              .append(eventShortdesDOM);
+
+            var eventDOM = $("<li/>");
+            eventDOM.append(eventaDOM).appendTo($(".center__left-list"));
+          });
+        }
+      );
+    </script>
+  </head>
+  <body>
+    <div>
+      <div id="top-header">
+        <div id="top-header-inner">
+          <div id="top-header__top">
+            <div class="inline-flex float-left">
+              <div id="top-header__top-contact">
+                <a class="email" href="#">123@gmail.com</a>
+                <a class="phone" href="#">0912345678</a>
+              </div>
+            </div>
+            <div class="inline-flex float-right md-hidden">
+              <div id="top-header__top-menu">
+                <a href="#">What We Do</a>
+                <a href="#">Become A Volunteer</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+              <div id="top-header__top-auth">
+                <a href="#">Sign In</a>
+              </div>
+            </div>
+          </div>
+          <div id="top-header__middle">
+            <a href="homepage.html">
+              <div class="site-info">
+                <span class="logo float-left">
+                  <img src="src/img/logo/Hands.png" />
+                </span>
+                <h2 class="site-name">Hands</h2>
+              </div>
+            </a>
+            <ul id="top-header__middle-menu" class="float-right">
+              <li class="xs-hidden">
+                <a href="homepage.html">Home</a>
+              </li>
+              <li>
+                <a href="#">Causes<i class="plus"></i></a>
+                <ul>
+                  <li><a href="cause_child_edu.html">Children</a></li>
+                  <li><a href="cause_disability_homelessness.html">Disabled</a></li>
+                  <li><a href="cause_child_edu.html">Education</a></li>
+                  <li><a href="cause_environment.html">Environment</a></li>
+                  <li><a href="#">Health</a></li>
+                  <li><a href="cause_disability_homelessness.html">Homelessness</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Team<i class="plus"></i></a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <div id="top-header__quick-action" class="xs-hidden">
+                <button type="button">Find Cause</button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Phan center -->
+      <!-- Phan header -->
+      <div id="main-content" class="center prid-container" id="center">
+        <div
+          class="content-section background-overlay dark double-horizontal-padding"
+          style="
+            background-image: url(src/img/common/bg-cause-children.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+          "
+        >
+          <div class="content-section__inner">
+            <div class="section__content page-intro-section__content">
+              <div class="page-intro-section__text-wrapper">
+                <h1 class="section__main-heading text-center mb1">
+                  Children & Education
+                </h1>
+                <h4 class="section__bottom-heading text-center">“Children are one third of our population and all of our future.”</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-section">
+          <div class="content-section__inner">
+            <div class="section__content cause-intro-section__content">
+              <div class="cause-intro-section__brief-wrapper">
+                <h5 class="section__top-heading">Dream and act</h5>
+                <h2 class="section__main-heading">
+                  We change the world to be a better place <br/>For all children
+                </h2>
+                <h4 class="section__bottom-heading">
+                  And we might need a hand from you
+                </h4>
+                <p class="color-gray mb2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="large " type="button">
+                  Join Us
+                  <span class="icon medium end"><img src="src/img/icon/heart.svg"></span>
+                </button>
+              </div>
+              <div class="cause-intro-section__pictures-wrapper">
+                <div class="cause-intro-section__picture">
+                  <img src="src/img/common/pic-cause-children-1.jpg"/>
+                </div>
+                <div class="cause-intro-section__picture">
+                  <img src="src/img/common/pic-cause-children-2.jpg"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-section">
+          <div class="content-section__inner">
+            <h5 class="section__top-heading text-center no-line">
+              Get Involved Now
+            </h5>
+            <h2 class="section__main-heading text-center">
+              Give a helping hand to those who need it
+            </h2>
+            <div class="section__heading-icon text-center">
+              <img src="src/img/icon/heart-beat.svg" />
+            </div>
+            <div class="section__content project-list-section__content">
+              <div class="top-projects-wrapper">
+                <ul id="top-project-list" class="project-list">
+                  <li class="project-brief">
+                    <div class="project__featured-image">
+                      <img
+                        src="src/img/temp/photo-1529079337819-f6d0024bd364.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project__infos">
+                      <h4 class="project__title">
+                        Water For All Children 2020
+                      </h4>
+                      <p class="prohect__description color-gray">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <div class="project__extra">
+                        <div class="project__extra-info">
+                          <h5>Schedule</h5>
+                          <h4 class="highlight">Weekly</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Supporters</h5>
+                          <h4 class="highlight">220</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Organizations</h5>
+                          <h4 class="highlight">5</h4> 
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="project-brief">
+                    <div class="project__featured-image">
+                      <img
+                        src="src/img/temp/photo-1437914983566-976d85602771.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project__infos">
+                      <h4 class="project__title">
+                        Get youth the essentials they need
+                      </h4>
+                      <p class="prohect__description color-gray">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <div class="project__extra">
+                        <div class="project__extra-info">
+                          <h5>Schedule</h5>
+                          <h4 class="highlight">Weekly</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Supporters</h5>
+                          <h4 class="highlight">220</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Organizations</h5>
+                          <h4 class="highlight">5</h4> 
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="project-brief">
+                    <div class="project__featured-image">
+                      <img
+                        src="src/img/temp/photo-1469406396016-013bfae5d83e.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project__infos">
+                      <h4 class="project__title">
+                        Teach kids the art of giving back
+                      </h4>
+                      <p class="prohect__description color-gray">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <div class="project__extra">
+                        <div class="project__extra-info">
+                          <h5>Schedule</h5>
+                          <h4 class="highlight">9<sup>th</sup> Nov</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Supporters</h5>
+                          <h4 class="highlight">50</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Organizations</h5>
+                          <h4 class="highlight">1</h4> 
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="project-brief">
+                    <div class="project__featured-image">
+                      <img
+                        src="src/img/temp/photo-1524069290683-0457abfe42c3.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project__infos">
+                      <h4 class="project__title">
+                        Make a “big” difference with kids
+                      </h4>
+                      <p class="prohect__description color-gray">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <div class="project__extra">
+                        <div class="project__extra-info">
+                          <h5>Schedule</h5>
+                          <h4 class="highlight">Yearly</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Supporters</h5>
+                          <h4 class="highlight">40</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Organizations</h5>
+                          <h4 class="highlight">1</h4> 
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="project-brief">
+                    <div class="project__featured-image">
+                      <img
+                        src="src/img/temp/photo-1476234251651-f353703a034d.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project__infos">
+                      <h4 class="project__title">
+                        Help Us Make More Kids Mighty!
+                      </h4>
+                      <p class="prohect__description color-gray">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <div class="project__extra">
+                        <div class="project__extra-info">
+                          <h5>Schedule</h5>
+                          <h4 class="highlight">20<sup>th</sup> May</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Supporters</h5>
+                          <h4 class="highlight">25</h4> 
+                        </div>
+                        <div class="project__extra-info">
+                          <h5>Organizations</h5>
+                          <h4 class="highlight">1</h4> 
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Phan footer -->
+      <div id="footer">
+        <div class="footer-inner">
+          <div id="footer__top">
+            <div class="footer__widget">
+              <h3 class="footer__widget__title">About us</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div class="footer__widget">
+              <h3 class="footer__widget__title">General Causes</h3>
+              <ul class="footer__menu">
+                <li><a href="cause_child_edu.html">Children</a></li>
+                <li><a href="cause_disability_homelessness.html">Disabled</a></li>
+                <li><a href="cause_child_edu.html">Education</a></li>
+                <li><a href="cause_environment.html">Environment</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="cause_disability_homelessness.html">Homelessness</a></li>
+              </ul>
+            </div>
+            <div class="footer__widget">
+              <h3 class="footer__widget__title">Read more</h3>
+              <ul class="footer__menu">
+                <li><a href="#">How we work</a></li>
+                <li><a href="#">Supported provinces and cities</a></li>
+                <li><a href="#">Common questions</a></li>
+                <li><a href="#">Supported cities</a></li>
+                <li><a href="#">Success stories</a></li>
+                <li><a href="#">Press center</a></li>
+              </ul>
+            </div>
+            <div class="footer__widget">
+              <h3 class="footer__widget__title">Join Community</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div id="footer__bottom">
+            <a href="#">
+              <div class="site-info">
+                <span class="logo float-left">
+                  <img src="src/img/logo/Hands.png" />
+                </span>
+                <h2 class="site-name">Hands</h2>
+              </div>
+            </a>
+            <div class="copyright">
+              <span>Copyright By@TuanHung - 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* -- script for top sticky header -- */
+      window.onscroll = function () {
+        updateTopHeaderStyle();
+      };
+      var topHeaderNode = document.getElementById("top-header");
+      var topHeaderOffsetTop = topHeaderNode.offsetTop;
+      function updateTopHeaderStyle() {
+        if (window.pageYOffset > topHeaderOffsetTop) {
+          topHeaderNode.classList.add("sticky");
+        } else {
+          topHeaderNode.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project A</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style/control.css" />
+    <link rel="stylesheet" type="text/css" href="style/common.css" />
+    <link rel="stylesheet" type="text/css" href="style/project__detail.css" />
+    <link rel="stylesheet" type="text/css" href="style/layout.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Phan header -->
+    <div id="top-header">
+      <div id="top-header-inner">
+        <div id="top-header__top">
+          <div class="inline-flex float-left">
+            <div id="top-header__top-contact">
+              <a class="email" href="#">123@gmail.com</a>
+              <a class="phone" href="#">0912345678</a>
+            </div>
+          </div>
+          <div class="inline-flex float-right md-hidden">
+            <div id="top-header__top-menu">
+              <a href="#">What We Do</a>
+              <a href="#">Become A Volunteer</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+            <div id="top-header__top-auth">
+              <a href="#">Sign In</a>
+            </div>
+          </div>
+        </div>
+        <div id="top-header__middle">
+          <div class="logo float-left">
+            <a href="#"><img src="src/img/logo/Hands.png" /></a>
+          </div>
+          <ul id="top-header__middle-menu" class="float-right">
+            <li class="xs-hidden">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Causes<i class="plus"></i></a>
+              <ul>
+                <li><a href="#">Children</a></li>
+                <li><a href="#">Disabled</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Enviroment</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Homelessness</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Team<i class="plus"></i></a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <div id="top-header__quick-action" class="xs-hidden">
+              <button type="button">Find Cause</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phan center -->
+    <div class="grid-container">
+      <div class="center-title">
+        <h2>Ensure school A's students education</h2>
+        <p style="opacity: 0.5">
+          Help students in school A have books to study after their hard time
+        </p>
+      </div>
+      <div class="row p-0" style="margin-bottom: 20px">
+        <div class="center__left col-md-8 col-sm-12">
+          <img src="src/img/sample.png" class="col-sm-12" />
+          <div class="center-deadline">
+            <p>Ngày diễn ra dự án: dd/mm/yyyy</p>
+          </div>
+        </div>
+        <div class="col-md-4 center__right col-sm-12">
+          <div class="center-progress">
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-valuenow="25"
+                aria-valuemax="100"
+                aria-valuemin="0"
+              ></div>
+            </div>
+          </div>
+          <div class="participant">
+            <h2>15 PEOPLE</h2>
+            <p>target: 20 people</p>
+          </div>
+          <div class="deadline">
+            <h2>45</h2>
+            <p>days to go</p>
+          </div>
+          <div class="center-category">
+            <div>
+              <img
+                style="max-width: 10%; height: auto"
+                src="src/img/icon/children-cause.jpg"
+              />
+              <a href="#">: children</a>
+            </div>
+            <div style="margin-bottom: 20px">
+              <img
+                style="max-width: 10%; height: auto"
+                src="src/img/icon/education-cause.jpg"
+              />
+              <a href="#">: education</a>
+            </div>
+            <div>
+              <button type="button" class="big-button">
+                Join this project
+              </button>
+            </div>
+            <div class="notification">
+              <a href="#"> Remind me <i class="fa fa-bell"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="content-header-section" id="content-tab">
+        <div class="content-header grid-container">
+          <div class="tab-content" id="selector">
+            <div class="content-selector active-control" ref="section-01">
+              Description
+            </div>
+            <div class="content-selector" ref="section-02">Location</div>
+            <div class="content-selector" ref="section-03">Progress</div>
+          </div>
+          <div class="tab-control">
+            <div class="remind-me">
+              <a href="#"> Remind me <i class="fa fa-bell"></i> </a>
+            </div>
+            <button type="button" class="small-button">
+              <a href="#"> Join this project </a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="grid-container content-text">
+          <div id="section-01" class="section-text">
+            <div class="h2">Description</div>
+            <div class="text-description"></div>
+          </div>
+          <div id="section-02" class="section-text">
+            <div class="h2">Location</div>
+            <div class="text-location"></div>
+          </div>
+          <div id="section-03" class="section-text">
+            <div class="h2">Progress</div>
+            <div class="text-progress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recommendation">
+      <div class="grid-container" style="margin-bottom: 20px">
+        <p style="display: inline; padding-right: 30px">
+          <b>Recommendation</b>
+        </p>
+        <a style="display: inline; color: #55c882" href="#">
+          More
+          <i class="fa fa-long-arrow-right"></i>
+        </a>
+      </div>
+      <div class="grid-container">
+        <div class="row">
+          <div class="col-md-3 section-recommendation">
+            <img src="src/img/sample.png" />
+            <a> <h4>School B's camp-fire</h4></a>
+            <p>
+              arcu ac tortor dignissim convallis aenean et tortor at risus
+              viverra adipiscing at in tellus
+            </p>
+          </div>
+          <div class="col-md-3 section-recommendation">
+            <img src="src/img/sample.png" />
+            <a> <h4>School B's camp-fire</h4></a>
+            <p>
+              arcu ac tortor dignissim convallis aenean et tortor at risus
+              viverra adipiscing at in tellus
+            </p>
+          </div>
+          <div class="col-md-3 section-recommendation">
+            <img src="src/img/sample.png" />
+            <a> <h4>School B's camp-fire</h4></a>
+            <p>
+              arcu ac tortor dignissim convallis aenean et tortor at risus
+              viverra adipiscing at in tellus
+            </p>
+          </div>
+          <div class="col-md-3 section-recommendation">
+            <img src="src/img/sample.png" />
+            <a> <h4>School B's camp-fire</h4></a>
+            <p>
+              arcu ac tortor dignissim convallis aenean et tortor at risus
+              viverra adipiscing at in tellus
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Phan footer -->
+    <div id="footer">
+      <div class="footer-inner">
+        <div id="footer__top">
+          <div class="footer__widget">
+            <h3 class="footer__widget__title">About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="footer__widget">
+            <h3 class="footer__widget__title">General Causes</h3>
+            <ul class="footer__menu">
+              <li><a href="#">Children</a></li>
+              <li><a href="#">Disabled</a></li>
+              <li><a href="#">Education</a></li>
+              <li><a href="#">Enviroment</a></li>
+              <li><a href="#">Health</a></li>
+              <li><a href="#">Homelessness</a></li>
+            </ul>
+          </div>
+          <div class="footer__widget">
+            <h3 class="footer__widget__title">Read more</h3>
+            <ul class="footer__menu">
+              <li><a href="#">How we work</a></li>
+              <li><a href="#">Supported provinces and cities</a></li>
+              <li><a href="#">Common questions</a></li>
+              <li><a href="#">Supported cities</a></li>
+              <li><a href="#">Success stories</a></li>
+              <li><a href="#">Press center</a></li>
+            </ul>
+          </div>
+          <div class="footer__widget">
+            <h3 class="footer__widget__title">Join Community</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <div id="footer__bottom">
+          <div class="logo">
+            <a href="#"><img src="src/img/logo/Hands.png" /></a>
+          </div>
+          <div class="copyright">
+            <span>Copyright By@TuanHung - 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Script goi json -->
+    <script>
+      $.getJSON(
+        "https://project-x-f09a8.firebaseio.com/Project%20A.json",
+        function (data) {
+          var objs = Object.keys(data).map(function (key) {
+            return { id: key, value: data[key] };
+          });
+          objs.forEach(function (item) {
+            var eventdescriptionDOM;
+            eventdescriptionDOM = $("<div/>");
+            eventdescriptionDOM
+              .appendTo($(".text-description"))
+              .html(
+                item.value.description
+                  ? item.value.description
+                  : "Dang cap nhat"
+              );
+
+            var eventlocationDOM;
+            eventlocationDOM = $("<div/>");
+            eventlocationDOM
+              .appendTo($(".text-location"))
+              .html(
+                item.value.location ? item.value.location : "Dang cap nhat"
+              );
+            var eventprogressDOM = $("<div/>");
+            eventprogressDOM
+              .appendTo($(".text-progress"))
+              .html(
+                item.value.progress ? item.value.progress : "Dang cap nhat"
+              );
+          });
+        }
+      );
+      var activeByClick = false;
+      $("#selector >.content-selector").click(function () {
+        let activeByClick = true;
+        $.when(
+          $("html,body").animate(
+            {
+              scrollTop:
+                $("#" + $(this).attr("ref")).offset().top -
+                $("#top-header").outerHeight(true) -
+                $("#content-tab").outerHeight(true),
+            },
+            100
+          )
+        ).then(function () {
+          activeByClick = false;
+        });
+        $("#selector>.content-selector.active-control").removeClass(
+          "active-control"
+        );
+        $(this).addClass("active-control");
+        console.log(activeByClick);
+      });
+    </script>
+    <!-- script cho active tab-bar -->
+    <script>
+      var body = document.getElementsByClassName("body")[0];
+      document.addEventListener("scroll", function () {
+        if (!activeByClick) {
+          var tabs = document.getElementsByClassName("content-selector");
+          var sections = document.getElementsByClassName("section-text");
+          for (let i = 0; i < sections.length; i++) {
+            var height =
+              sections[i].offsetTop -
+              $("#top-header").outerHeight(true) -
+              $("#content-tab").outerHeight(true);
+            if (window.pageYOffset > height) {
+              $(".tab-content > div.active-control").removeClass(
+                "active-control"
+              );
+              tabs[i].classList.add("active-control");
+            }
+          }
+        }
+      });
+    </script>
+    <!--  script for top sticky header-->
+    <script>
+      window.onscroll = function () {
+        updateTopHeaderStyle();
+      };
+      var topHeaderNode = document.getElementById("top-header");
+      var topHeaderOffsetTop = topHeaderNode.offsetTop;
+      function updateTopHeaderStyle() {
+        if (window.pageYOffset > topHeaderOffsetTop) {
+          topHeaderNode.classList.add("sticky");
+        } else {
+          topHeaderNode.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>

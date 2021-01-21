@@ -1,0 +1,51 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+.p0 {
+  padding: 0 !important;
+}
+.p3 {
+  padding: calc(12px * 3) !important;
+}
+.mb1 {
+  margin-bottom: calc(12px * 1) !important;
+}
+.mb2 {
+  margin-bottom: calc(12px * 2) !important;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.float-left {
+  float: left !important;
+}
+.float-right {
+  float: right !important;
+}
+.bg-gray {
+  background: #f4f7f6 !important;
+}
+.color-white {
+  color: #fff !important;
+}
+.color-gray {
+  color: #6e7c90 !important;
+}
+.color-orange {
+  color: #ff8b3c !important;
+}
+.margin-center {
+  margin: 0 auto !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.min-height-auto {
+  min-height: auto !important;
+}
+.behind {
+  position: relative;
+  z-index: 0 !important;
+}
