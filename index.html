@@ -1,31 +1,57 @@
 <html>
+  <head>
+    <title>Hand in hand</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $.getJSON(
+        "https://project-x-f09a8.firebaseio.com/Projects.json",
+        function (data) {
+          var objs = Object.keys(data).map(function (key) {
+            return { id: key, value: data[key] };
+          });
+          objs.forEach(function (item) {
+            var eventShortdesDOM = $("<div/>");
+            eventShortdesDOM
+              .css("color", "#007bff")
+              .css("opacity", "0.8")
+              .addClass(" center__short-description ")
+              .html(
+                item.value.short__description
+                  ? item.value.short__description
+                  : "Dang cap nhat"
+              );
+            var eventImgDOM = $("<img/>");
+            eventImgDOM
+              .attr("src", item.value.image)
+              .css("margin", "0 5px")
+              .html(item.value.image);
+            var eventNameDOM = $("<p/>");
+            eventNameDOM
+              .css("color", "#007bff")
+              .addClass("center__name")
+              .html(item.value.name ? item.value.name : " Dang cap nhat ");
+            var eventaDOM = $("<a/>");
+            eventaDOM
+              .css("cursor", "pointer")
+              .append(eventImgDOM)
+              .append(eventNameDOM)
+              .append(eventShortdesDOM);
+
+            var eventDOM = $("<li/>");
+            eventDOM.append(eventaDOM).appendTo($(".center__left-list"));
+          });
+        }
+      );
+    </script>
+  </head>
   <body>
-    The shoebill is distributed in freshwater swamps of central tropical Africa,
-    from southern Sudan and South Sudan through parts of eastern Congo, Rwanda,
-    Uganda, western Tanzania and northern Zambia. The species is most numerous
-    in the West Nile sub-region and South Sudan (especially the Sudd, a main
-    stronghold for the species); it is also significant in wetlands of Uganda
-    and western Tanzania. More isolated records have been reported of shoebills
-    in Kenya, the Central African Republic, northern Cameroon, south-western
-    Ethiopia, Malawi. Vagrant strays to the Okavango Basin, Botswana and the
-    upper Congo River have also been sighted. The distribution of this species
-    seems to largely coincide with that of papyrus and lungfish. They are often
-    found in areas of flood plain interspersed with undisturbed papyrus and
-    reedbeds. When shoebill storks are in an area with deep water, a bed of
-    floating vegetation is a requirement. They are also found where there is
-    poorly oxygenated water. This causes the fish living in the water to surface
-    for air more often, increasing the likelihood a shoebill stork will
-    successfully capture it.[13] The shoebill is non-migratory with limited
-    seasonal movements due to habitat changes, food availability and disturbance
-    by humans.[12] Petroglyphs from Oued Djerat, eastern Algeria, show that the
-    shoebill occurred during the Early Holocene much more to the north, in the
-    wetlands that covered the present-day Sahara Desert at that time.[14] The
-    shoebill occurs in extensive, dense freshwater marshes. Almost all wetlands
-    that attract the species have undisturbed Cyperus papyrus and reed beds of
-    Phragmites and Typha. Although their distribution largely seems to
-    correspond with the distribution of papyrus in central Africa, the species
-    seems to avoid pure papyrus swamps and is often attracted to areas with
-    mixed vegetation. More rarely, the species has been seen foraging in rice
-    fields and flooded plantations.[12]
+    ABC
   </body>
 </html>
