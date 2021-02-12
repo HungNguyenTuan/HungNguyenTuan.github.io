@@ -179,3 +179,11 @@
   text-align: center;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 800px) {
+  .content-selector {
+    width: 33.333% !important;
+    padding-left: 20px !important ;
+    padding-right: 20px !important ;
+  }
+}
