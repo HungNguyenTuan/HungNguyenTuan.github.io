@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -75,7 +76,6 @@
         </div>
       </div>
     </div>
-
     <!-- Phan center -->
     <div class="grid-container">
       <div class="center-title">
@@ -295,7 +295,6 @@
                   ? item.value.description
                   : "Dang cap nhat"
               );
-
             var eventlocationDOM;
             eventlocationDOM = $("<div/>");
             eventlocationDOM
@@ -314,47 +313,53 @@
       );
       var activeByClick = false;
       $("#selector >.content-selector").click(function () {
-        let activeByClick = true;
-        $.when(
-          $("html,body").animate(
-            {
-              scrollTop:
+        activeByClick = true;
+        var curSeclector = $(this);
+        $("html, body").animate({
+          scrollTop:
                 $("#" + $(this).attr("ref")).offset().top -
                 $("#top-header").outerHeight(true) -
                 $("#content-tab").outerHeight(true),
-            },
-            100
-          )
-        ).then(function () {
-          activeByClick = false;
-        });
-        $("#selector>.content-selector.active-control").removeClass(
-          "active-control"
+          },
+          {
+            easing: 'swing',
+            duration: 100,
+            complete: function(){
+              $("#selector>.content-selector.active-control").removeClass(
+                "active-control"
+              );
+              curSeclector.addClass("active-control");
+              setTimeout(function() {
+                activeByClick = false;
+              }, 100);
+      
+            }
+          }
         );
-        $(this).addClass("active-control");
-        console.log(activeByClick);
       });
     </script>
     <!-- script cho active tab-bar -->
     <script>
-      var body = document.getElementsByClassName("body")[0];
-      document.addEventListener("scroll", function () {
-        if (!activeByClick) {
-          var tabs = document.getElementsByClassName("content-selector");
-          var sections = document.getElementsByClassName("section-text");
-          for (let i = 0; i < sections.length; i++) {
-            var height =
-              sections[i].offsetTop -
-              $("#top-header").outerHeight(true) -
-              $("#content-tab").outerHeight(true);
-            if (window.pageYOffset > height) {
-              $(".tab-content > div.active-control").removeClass(
-                "active-control"
-              );
-              tabs[i].classList.add("active-control");
+      $(document).ready( function (){
+        $(window).scroll( function ()
+        {
+          if(!activeByClick) {
+            var tabs = document.getElementsByClassName("content-selector");
+            var sections = document.getElementsByClassName("section-text");
+            for (let i = 0; i < sections.length; i++) {
+              var height =
+                sections[i].offsetTop -
+                $("#top-header").outerHeight(true) -
+                $("#content-tab").outerHeight(true);
+              if (window.pageYOffset > height) {
+                $(".tab-content > div.active-control").removeClass(
+                  "active-control"
+                );
+                tabs[i].classList.add("active-control");
+              }
             }
           }
-        }
+        });
       });
     </script>
     <!--  script for top sticky header-->
@@ -373,4 +378,4 @@
       }
     </script>
   </body>
-</html>
+</html
