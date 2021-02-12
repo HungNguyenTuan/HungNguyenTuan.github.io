@@ -150,7 +150,7 @@
 #top-header ul#top-header__middle-menu a {
   display: flex;
   align-items: center;
-  padding: 12px 12px;
+  padding: 12px 8px;
   text-decoration: none;
   color: #6e7c90;
   position: relative;
