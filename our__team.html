@@ -15,50 +15,6 @@
     <link rel="stylesheet" type="text/css" href="style/our__team.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      $.getJSON(
-        "https://project-x-f09a8.firebaseio.com/Team%20.json",
-        function (data) {
-          var objs = Object.keys(data).map(function (key) {
-            return { id: key, value: data[key] };
-          });
-          console.log(data);
-          objs.forEach(function (item) {
-            var eventImageDOM = $("<img/>");
-            eventImageDOM
-              .addClass("center-image")
-              .attr("src", item.value.image)
-              .css("margin", "0 5px")
-              .html(item.value.image);
-
-            var eventNameDOM = $("<p/>");
-            eventNameDOM
-              .addClass("center-name")
-              .addClass("h4")
-              .html(item.value.name);
-            var eventJobDOM = $("<p/>");
-            eventJobDOM.addClass("center-job").html(item.value.job);
-            var eventRoleDOM = $("<p/>");
-            eventRoleDOM.addClass("center-role").html(item.value.role);
-            var eventDescriptionDOM = $("<p/>");
-            eventDescriptionDOM
-              .addClass("center-description")
-              .html(item.value.description);
-            var eventDOM = $("<div/>");
-            eventDOM
-              .addClass("center-person")
-              .addClass("col-md-12")
-              .addClass("col-lg-6")
-              .append(eventImageDOM)
-              .append(eventNameDOM)
-              .append(eventRoleDOM)
-              .append(eventJobDOM)
-              .append(eventDescriptionDOM)
-              .appendTo($(".center-main"));
-          });
-        }
-      );
-    </script>
   </head>
   <body>
     <div class="center">

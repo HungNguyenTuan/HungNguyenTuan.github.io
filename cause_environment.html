@@ -13,47 +13,6 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      $.getJSON(
-        "https://project-x-f09a8.firebaseio.com/Projects.json",
-        function (data) {
-          var objs = Object.keys(data).map(function (key) {
-            return { id: key, value: data[key] };
-          });
-          objs.forEach(function (item) {
-            var eventShortdesDOM = $("<div/>");
-            eventShortdesDOM
-              .css("color", "#007bff")
-              .css("opacity", "0.8")
-              .addClass(" center__short-description ")
-              .html(
-                item.value.short__description
-                  ? item.value.short__description
-                  : "Dang cap nhat"
-              );
-            var eventImgDOM = $("<img/>");
-            eventImgDOM
-              .attr("src", item.value.image)
-              .css("margin", "0 5px")
-              .html(item.value.image);
-            var eventNameDOM = $("<p/>");
-            eventNameDOM
-              .css("color", "#007bff")
-              .addClass("center__name")
-              .html(item.value.name ? item.value.name : " Dang cap nhat ");
-            var eventaDOM = $("<a/>");
-            eventaDOM
-              .css("cursor", "pointer")
-              .append(eventImgDOM)
-              .append(eventNameDOM)
-              .append(eventShortdesDOM);
-
-            var eventDOM = $("<li/>");
-            eventDOM.append(eventaDOM).appendTo($(".center__left-list"));
-          });
-        }
-      );
-    </script>
   </head>
   <body>
     <div>
@@ -62,8 +21,8 @@
           <div id="top-header__top">
             <div class="inline-flex float-left">
               <div id="top-header__top-contact">
-                <a class="email" href="#">123@gmail.com</a>
-                <a class="phone" href="#">0912345678</a>
+                <a class="email" href="#">tuanhung03042004@gmail.com</a>
+                <a class="phone" href="#">0965116966</a>
               </div>
             </div>
             <div class="inline-flex float-right md-hidden">
@@ -72,9 +31,9 @@
                 <a href="#">Become A Volunteer</a>
                 <a href="contact.html">Contact Us</a>
               </div>
-              <div id="top-header__top-auth">
+              <!--<div id="top-header__top-auth">
                 <a href="#">Sign In</a>
-              </div>
+              </div>-->
             </div>
           </div>
           <div id="top-header__middle">
@@ -360,9 +319,9 @@
                 <h2 class="site-name">Hands</h2>
               </div>
             </a>
-            <div class="copyright">
+            <!--<div class="copyright">
               <span>Copyright By@TuanHung - 2020</span>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
