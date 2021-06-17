@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style/control.css" />
     <link rel="stylesheet" type="text/css" href="style/common.css" />
     <link rel="stylesheet" type="text/css" href="style/layout.css" />
+    <link rel="stylesheet" type="text/css" href="style/story_detail.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -16,11 +17,39 @@
   </head>
   <body>
     <!--header-->
-
     <!--main-->
-
-    <div></div>
-
+    <div>
+      <div
+        class="background_fixed"
+        style="background-image: url(src/img/sample.png)"
+        id="background-pic"
+      >
+        <!-- <div class="row no-gutters">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10 main-text">
+            <h1>HAHAHAHAHA</h1>
+          </div>
+          <div class="col-sm-1"></div>
+        </div> -->
+      </div>
+      <div class="row no-gutters">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 main-text">
+          <h1>HAHAHAHAHA</h1>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+    <div class="sub-content"></div>
     <!--footer-->
   </body>
+  <script>
+    function getHeight() {
+      var obj = document.getElementById("background-pic").offsetHeight;
+      console.log(obj);
+      console.log("sdda");
+      console.log("dsfa");
+    }
+    Window.onload = getHeight();
+  </script>
 </html>
