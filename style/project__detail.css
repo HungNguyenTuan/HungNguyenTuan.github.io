@@ -206,7 +206,7 @@ td {
   cursor: pointer;
 }
 .collapsible:hover {
-  background-color: #555 !important;
+  background-color: rgb(184, 183, 183) !important;
 }
 .content-collapsible {
   padding: 0 18px;
