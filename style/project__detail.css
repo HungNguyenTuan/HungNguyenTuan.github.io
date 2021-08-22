@@ -205,7 +205,9 @@ td {
   background-color: #55c882;
 }
 .content-collapsible {
+  padding: 0 18px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
 }
