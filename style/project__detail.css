@@ -192,6 +192,10 @@ th,
 td {
   border: 1px solid black;
 }
+th,
+td {
+  padding: 15px;
+}
 #table tr:nth-child(2n) {
   background-color: #eee;
 }
