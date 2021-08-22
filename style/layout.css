@@ -1740,10 +1740,10 @@
   color: #55c882;
   font-weight: 700;
 }
-/* .project-list-section__content .top-projects-wrapper li.project-brief:hover {
+.project-list-section__content .top-projects-wrapper li.project-brief:hover {
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
 }
-.project-list-section__content
+/* .project-list-section__content
   .top-projects-wrapper
   li.project-brief:hover
   a:hover {
