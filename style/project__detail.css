@@ -192,3 +192,9 @@ th,
 td {
   border: 1px solid black;
 }
+#table tr:nth-child(2n) {
+  background-color: #eee;
+}
+#table tr:nth-child(2n + 1) {
+  background-color: #fff;
+}
