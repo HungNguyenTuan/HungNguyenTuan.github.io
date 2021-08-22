@@ -211,3 +211,8 @@ td {
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
 }
+.section-text .highlight {
+  font-size: 24px;
+  color: #55c882;
+  font-weight: 700;
+}
