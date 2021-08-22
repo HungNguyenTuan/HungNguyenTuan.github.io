@@ -187,3 +187,8 @@
     padding-right: 20px !important ;
   }
 }
+table,
+th,
+td {
+  border: 1px solid black;
+}
