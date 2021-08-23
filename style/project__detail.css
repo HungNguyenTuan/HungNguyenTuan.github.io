@@ -196,6 +196,9 @@ th,
 td {
   padding: 15px;
 }
+td {
+  text-align: center;
+}
 #table tr:nth-child(2n) {
   background-color: #eee;
 }
